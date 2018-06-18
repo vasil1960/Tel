@@ -57,6 +57,15 @@ Ext.define('Tel.model.Model', {
             },
             {
                 name: 'dlagnost'
+            },
+            {
+                name: 'directorate'
+            },
+            {
+                name: 'directorateBadj'
+            },
+            {
+                name: 'pod_id'
             }
         ]
     }

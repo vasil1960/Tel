@@ -24,7 +24,7 @@
    "url": null,
    "js": [
       {
-         "path": "../touch/sencha-touch.js",
+         "path": "touch/sencha-touch.js",
          "x-bootstrap": true
       },
       {
@@ -72,5 +72,5 @@
       "enable": true,
       "deltas": "deltas"
    },
-   "id": "92599669-e7d9-4fe5-94c5-02b0c276831d"
+   "id": "bde8edba-bcf7-48c7-8bc7-a39aa888baf3"
 }

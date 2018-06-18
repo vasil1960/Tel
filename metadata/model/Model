@@ -166,6 +166,45 @@
             },
             "name": "field11",
             "designerId": "31bba1e3-1f36-4248-bff1-9431e0de51a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "directorate"
+            },
+            "name": "field12",
+            "designerId": "1a4547d3-cdc7-4b83-bb48-14c8603d578a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "directorateBadj"
+            },
+            "name": "field13",
+            "designerId": "b62562ec-1ad5-4ae6-8f51-492b31a23de9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pod_id"
+            },
+            "name": "field14",
+            "designerId": "4143cf1d-4cab-423a-94b1-3265ffe98cad"
         }
     ]
 }

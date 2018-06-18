@@ -93,14 +93,14 @@ Ext.define('Tel.controller.AllUsersSearch', {
     onSearchfieldClearicontap: function(textfield, e, eOpts) {
 
 
-        var store = Ext.getStore('Store');
+        //var store = Ext.getStore('Store');
 
 
-        store.clearFilter();
+        //store.clearFilter();
 
-        store.currentPage = 1;
+        //store.currentPage = 1;
 
-        store.load();
+        //store.load();
 
     }
 

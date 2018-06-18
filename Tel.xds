@@ -4,8 +4,7 @@
         "cmd": {
             "license": "commercial",
             "cmdVersion": "6.5.3.6",
-            "frameworkVersion": "2.4.2.571",
-            "frameworkOverride": "C:\\touch-2.4.2"
+            "frameworkVersion": "2.4.2.571"
         },
         "canvasControls": {
             "viewportSize": {
@@ -27,11 +26,7 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": false,
         "lockUrlPrefix": false,
-        "installStatus": "Not Installed",
-        "lastBuildSelection": {
-            "value": "nativeBuild",
-            "display": "Native Build"
-        }
+        "installStatus": "Not Installed"
     },
     "xdsVersion": "3.5.1",
     "xdsBuild": 348,
@@ -54,7 +49,8 @@
         "resource": [
             "5330675a-b252-4691-ad26-23b82c43248c",
             "80788844-0a34-4bbf-a2f5-c42435c14c93",
-            "7627fb9b-54c8-49d5-980b-a6a228073a11"
+            "7627fb9b-54c8-49d5-980b-a6a228073a11",
+            "347cfc9d-9e7f-42ee-86ef-351b0fb958d8"
         ],
         "app": [
             "application"
