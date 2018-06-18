@@ -1,0 +1,76 @@
+{
+   "builds": {
+      "web": {
+         "default": true
+      },
+      "native": {
+         "packager": "cordova",
+         "cordova": {
+            "config": {
+               "id": "com.domain.Tel",
+               "name": "Tel",
+               "platforms": "android"
+            }
+         }
+      }
+   },
+   "name": "Tel",
+   "indexHtmlPath": "index.html",
+   "framework": "touch",
+   "classpath": [
+      "app",
+      "app.js"
+   ],
+   "url": null,
+   "js": [
+      {
+         "path": "../touch/sencha-touch.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "bootstrap.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true,
+         "update": "delta"
+      }
+   ],
+   "css": [
+      {
+         "update": "delta",
+         "platform": [
+            "phone",
+            "tablet",
+            "desktop"
+         ],
+         "theme": "Default",
+         "path": "resources/css/sencha-touch-80788844-0a34-4bbf-a2f5-c42435c14c93.css"
+      }
+   ],
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      "resources/images",
+      "resources/icons",
+      "resources/startup"
+   ],
+   "ignore": [
+      "\\.svn$"
+   ],
+   "archivePath": "archive",
+   "requires": [],
+   "cache": {
+      "enable": true,
+      "deltas": "deltas"
+   },
+   "id": "92599669-e7d9-4fe5-94c5-02b0c276831d"
+}

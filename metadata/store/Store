@@ -1,0 +1,51 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "Store",
+        "model": "Model",
+        "remoteFilter": true,
+        "storeId": "Store"
+    },
+    "name": "MyJsonPStore",
+    "designerId": "f5984f3d-1ccf-42cb-8dcc-4715bfaef68f",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": null,
+                "designer|displayName": null,
+                "url": "https://vasil.iag.bg/tel/allusers"
+            },
+            "name": "MyJsonPProxy",
+            "designerId": "67824cfc-2c25-42a5-8089-a271acbabb54",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|createAlias": null,
+                        "designer|displayName": null,
+                        "rootProperty": "records"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "aed16f58-f4a5-42d0-ba97-951607b6f43d"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "name": "Tel",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.5.3.6",
+            "frameworkVersion": "2.4.2.571",
+            "frameworkOverride": "C:\\touch-2.4.2"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://localhost:1841/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "lastBuildSelection": {
+            "value": "nativeBuild",
+            "display": "Native Build"
+        }
+    },
+    "xdsVersion": "3.5.1",
+    "xdsBuild": 348,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "touch24",
+    "viewOrderMap": {
+        "view": [
+            "3535f3e8-fd0b-41f4-98fc-3a37e1643939"
+        ],
+        "store": [
+            "f5984f3d-1ccf-42cb-8dcc-4715bfaef68f"
+        ],
+        "controller": [
+            "76f252e8-f192-405a-b881-d6671958e082"
+        ],
+        "model": [
+            "3eb70cd8-90fa-44ad-bcd8-50c57d9afaeb"
+        ],
+        "resource": [
+            "5330675a-b252-4691-ad26-23b82c43248c",
+            "80788844-0a34-4bbf-a2f5-c42435c14c93",
+            "7627fb9b-54c8-49d5-980b-a6a228073a11"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

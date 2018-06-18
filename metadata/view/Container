@@ -1,0 +1,122 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "Container",
+        "itemId": "mycontainer",
+        "layout": "fit",
+        "padding": null
+    },
+    "name": "MyContainer",
+    "designerId": "3535f3e8-fd0b-41f4-98fc-3a37e1643939",
+    "cn": [
+        {
+            "type": "Ext.field.Search",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "designer|createAlias": null,
+                "designer|displayName": "AllUsersSearch",
+                "docked": "top",
+                "id": "search",
+                "itemId": "search",
+                "label": null,
+                "margin": 5,
+                "padding": 10
+            },
+            "name": "MySearchField1",
+            "designerId": "ffa02c57-172a-46d0-b230-0b62ceef65fd"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": null,
+                "designer|displayName": "AllUsersList",
+                "emptyText": "Няма запис",
+                "id": "alluserslist",
+                "margin": 5,
+                "padding": null,
+                "store": "Store"
+            },
+            "name": "MyList",
+            "designerId": "cdcecee0-f992-40a6-9101-56288baa8dfa",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "",
+                            "<table>",
+                            "    <tr>",
+                            "        <td style=\"padding:20px\"><img src=\"https://vasil.iag.bg/upload/1/{picture}\" width=\"80\" heigh=\"80\"></img></td>",
+                            "        <td>",
+                            "            <table>",
+                            "                <tr>",
+                            "                    <td>{titla} {ime} {prez} {fam}</td>",
+                            "                </tr> ",
+                            "                <tr>",
+                            "                    <td>{pod}</td>",
+                            "                </tr>",
+                            "                <tr>",
+                            "                    <td>{tel}</td>",
+                            "                </tr>",
+                            "                <tr>",
+                            "                    <td>{email}</td>",
+                            "                </tr>",
+                            "                <tr>",
+                            "                    <td>{dlagnost}</td>",
+                            "                </tr>",
+                            "            </table>",
+                            "            ",
+                            "            ",
+                            "        </td>",
+                            "         ",
+                            "    </tr>",
+                            "</table",
+                            "",
+                            "",
+                            ""
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "7b10958b-be53-4410-b463-e2f05a861adc"
+                },
+                {
+                    "type": "Ext.plugin.ListPaging",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoPaging": true,
+                        "loadMoreText": "Зареждам още ...",
+                        "noMoreRecordsText": "Няма повече записи"
+                    },
+                    "name": "MyListPagingPlugin",
+                    "designerId": "da222392-e3bb-4738-ab6e-567c6928cc1a"
+                }
+            ]
+        }
+    ]
+}
