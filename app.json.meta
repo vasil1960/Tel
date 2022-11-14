@@ -1,1 +1,1 @@
-{"_comment":"Please don't edit. This is Architect data.","name":"Tel","resources":[],"requires":[],"classpath":null,"css":[{"update":"delta","platform":["phone","tablet","desktop"],"theme":"Default","path":"resources/css/sencha-touch-80788844-0a34-4bbf-a2f5-c42435c14c93.css"}],"js":[]}
+{"_comment":"Please don't edit. This is Architect data.","name":"Tel","resources":[],"requires":[],"classpath":null,"css":[{"update":"delta","platform":["phone","tablet","desktop"],"theme":"Default","path":"resources/css/sencha-touch.css"}],"js":[]}

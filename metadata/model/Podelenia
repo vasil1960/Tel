@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Podelenia"
+    },
+    "name": "Model1",
+    "designerId": "f204f541-b90e-41b2-8a96-d44d8dc64a15",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pod_id"
+            },
+            "name": "field15",
+            "designerId": "249de0d1-d923-46e8-9c62-1eedd19ee43d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "podelenie"
+            },
+            "name": "field16",
+            "designerId": "21a4adb6-e103-4c96-a1e9-2f28db7ab57c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "glav_pod"
+            },
+            "name": "field17",
+            "designerId": "af63c55b-7fe3-442b-9839-50f9bd7b13a1"
+        }
+    ]
+}

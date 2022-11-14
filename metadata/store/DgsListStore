@@ -1,0 +1,47 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "dgsliststore",
+        "designer|userClassName": "DgsListStore",
+        "model": "Podelenia",
+        "storeId": "DgsListStore"
+    },
+    "name": "RdgStore1",
+    "designerId": "568cfb79-fd41-44b8-b026-ad8e090b98b3",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "https://vasil.iag.bg/tel/podelenia/dgslist"
+            },
+            "name": "MyJsonPProxy2",
+            "designerId": "5b7f1292-36c0-4628-91e6-95e2c330e668",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "records"
+                    },
+                    "name": "MyJsonReader2",
+                    "designerId": "9cd728b8-ac9b-448f-94cb-09c19137f443"
+                }
+            ]
+        }
+    ]
+}

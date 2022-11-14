@@ -46,7 +46,7 @@
             "desktop"
          ],
          "theme": "Default",
-         "path": "resources/css/sencha-touch-80788844-0a34-4bbf-a2f5-c42435c14c93.css"
+         "path": "resources/css/sencha-touch.css"
       }
    ],
    "appCache": {

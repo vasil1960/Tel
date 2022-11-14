@@ -1,0 +1,48 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userClassName": "IagStore",
+        "model": "IagUsersModel",
+        "remoteFilter": true,
+        "storeId": "IagStore",
+        "syncRemovedRecords": false
+    },
+    "name": "MyJsonPStore",
+    "designerId": "54d57782-5e44-4945-b6af-9dee6dc9dee9",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "https://vasil.iag.bg/tel/allusers/iag"
+            },
+            "name": "MyJsonPProxy1",
+            "designerId": "dc6b9197-c4b3-44ae-b3a7-90a900298644",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "records"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "cbfbfec8-9fd5-42f5-81b1-f032fdf6a43b"
+                }
+            ]
+        }
+    ]
+}

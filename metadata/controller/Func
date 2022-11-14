@@ -1,0 +1,93 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "func",
+        "designer|userClassName": "Func"
+    },
+    "name": "MyController",
+    "designerId": "289c3bc2-b963-4427-bad4-3fa4c873b252",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store"
+                ],
+                "fn": "loadStore",
+                "implHandler": [
+                    "",
+                    "",
+                    "var store = Ext.getStore(store);",
+                    "",
+                    "store.setAutoLoad('false');",
+                    "",
+                    "Ext.Viewport.setMasked({xtype:'loadmask', message:'Зареждам ...', indicator:true });",
+                    "",
+                    "store.clearFilter();",
+                    "",
+                    "store.load({",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success)",
+                    "        {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "        } else {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "            Ext.Msg.alert('Събщение', 'Проверете връзката с интернет и рестартирайте приложението', Ext.emptyFn);",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "loadStore",
+            "designerId": "ada26fc4-8667-4bd8-a846-fab71481370a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store",
+                    "url"
+                ],
+                "fn": "clearList",
+                "implHandler": [
+                    "var store = Ext.getStore(store);",
+                    "store.clearFilter();",
+                    "store.getProxy().setUrl(url);",
+                    "this.loadStore(store);",
+                    "Ext.Viewport.setMasked(false);"
+                ]
+            },
+            "name": "clearList",
+            "designerId": "457b8680-df6f-440b-aacc-6cbc690300fd"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "navigationview#main"
+            },
+            "name": "main",
+            "designerId": "6d302376-bdfe-4c41-8448-f2e204f73069"
+        }
+    ]
+}

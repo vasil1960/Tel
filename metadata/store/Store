@@ -8,7 +8,7 @@
     "userConfig": {
         "autoLoad": true,
         "designer|userClassName": "Store",
-        "model": "Model",
+        "model": "IagUsersModel",
         "remoteFilter": true,
         "storeId": "Store"
     },
@@ -25,7 +25,7 @@
             "userConfig": {
                 "designer|createAlias": null,
                 "designer|displayName": null,
-                "url": "https://vasil.iag.bg/tel/allusers"
+                "url": "https://vasil.iag.bg/tel/allusers/imeAndFam"
             },
             "name": "MyJsonPProxy",
             "designerId": "67824cfc-2c25-42a5-8089-a271acbabb54",

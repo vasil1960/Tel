@@ -17,19 +17,19 @@ Ext.define('Tel.store.Store', {
     extend: 'Ext.data.Store',
 
     requires: [
-        'Tel.model.Model',
+        'Tel.model.IagUsersModel',
         'Ext.data.proxy.JsonP',
         'Ext.data.reader.Json'
     ],
 
     config: {
         autoLoad: true,
-        model: 'Tel.model.Model',
+        model: 'Tel.model.IagUsersModel',
         remoteFilter: true,
         storeId: 'Store',
         proxy: {
             type: 'jsonp',
-            url: 'https://vasil.iag.bg/tel/allusers',
+            url: 'https://vasil.iag.bg/tel/allusers/imeAndFam',
             reader: {
                 type: 'json',
                 rootProperty: 'records'

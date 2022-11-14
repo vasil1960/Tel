@@ -8,10 +8,10 @@
         },
         "canvasControls": {
             "viewportSize": {
-                "name": "iPhone",
+                "name": "iPhone 6 Plus",
                 "builtIn": true,
-                "height": 480,
-                "width": 320
+                "height": 736,
+                "width": 414
             },
             "viewportOrientation": "portrait"
         },
@@ -26,7 +26,11 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": false,
         "lockUrlPrefix": false,
-        "installStatus": "Not Installed"
+        "installStatus": "Not Installed",
+        "lastBuildSelection": {
+            "value": "nativeBuild",
+            "display": "Native Build"
+        }
     },
     "xdsVersion": "3.5.1",
     "xdsBuild": 348,
@@ -35,22 +39,46 @@
     "framework": "touch24",
     "viewOrderMap": {
         "view": [
-            "3535f3e8-fd0b-41f4-98fc-3a37e1643939"
+            "23489c9b-ed21-45ca-8d01-b7c9fef82be9",
+            "b3e490d3-1a0b-4746-ab76-c2cda2dba297",
+            "9c3bbd5c-dfe2-46c8-bdab-91a1abf5bab2",
+            "e14ff388-2a50-4927-9ea8-657bad1c3e3e",
+            "3a05f651-38d5-41eb-b021-d24067c2bb7e",
+            "e5abae01-2945-4148-9911-fb746b9ff2ea",
+            "66500e1e-9f55-492e-baa4-2532c74abe90",
+            "2bce0f6f-2854-4fde-ba71-71e49578ed45",
+            "a42eac23-73e4-4a7c-816b-3222b6d8695a",
+            "b4001bdd-9242-421a-904c-7327ca93d921",
+            "849bbede-d18c-4dc0-b8f3-856ca38ad557",
+            "dbfaa388-5e98-4812-87fc-0b661f5422e2"
         ],
         "store": [
-            "f5984f3d-1ccf-42cb-8dcc-4715bfaef68f"
+            "f5984f3d-1ccf-42cb-8dcc-4715bfaef68f",
+            "54d57782-5e44-4945-b6af-9dee6dc9dee9",
+            "566c286c-a11f-4a08-8e8e-9869a1851b5a",
+            "e94a05e7-2eb1-4db0-ba4d-b6998534560b",
+            "8b38a43c-826c-4ad3-a24f-346f01df1276",
+            "4a4ebd01-1e7d-4be5-87cc-2f580c9d3cb6",
+            "568cfb79-fd41-44b8-b026-ad8e090b98b3"
         ],
         "controller": [
-            "76f252e8-f192-405a-b881-d6671958e082"
+            "76f252e8-f192-405a-b881-d6671958e082",
+            "289c3bc2-b963-4427-bad4-3fa4c873b252",
+            "af2dfe8e-fab8-4909-95e0-f1b42c660561",
+            "41104451-fd07-44ec-9223-788f298db09b",
+            "a887e81c-7bc2-4f43-b007-d9b6dc93a9d4",
+            "fa4117f0-904d-40fb-aa15-1b0f3980e584"
         ],
         "model": [
-            "3eb70cd8-90fa-44ad-bcd8-50c57d9afaeb"
+            "3eb70cd8-90fa-44ad-bcd8-50c57d9afaeb",
+            "f204f541-b90e-41b2-8a96-d44d8dc64a15"
         ],
         "resource": [
             "5330675a-b252-4691-ad26-23b82c43248c",
-            "80788844-0a34-4bbf-a2f5-c42435c14c93",
             "7627fb9b-54c8-49d5-980b-a6a228073a11",
-            "347cfc9d-9e7f-42ee-86ef-351b0fb958d8"
+            "347cfc9d-9e7f-42ee-86ef-351b0fb958d8",
+            "77cf5729-513b-4e02-903d-9a2dfb749734",
+            "53d62e52-0a91-4bf4-ad35-b4e62c4ee23e"
         ],
         "app": [
             "application"

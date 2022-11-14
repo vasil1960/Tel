@@ -1,0 +1,320 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "podcontroller",
+        "designer|userClassName": "PodController"
+    },
+    "name": "MyController",
+    "designerId": "fa4117f0-904d-40fb-aa15-1b0f3980e584",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "dgsBtn",
+                "selector": "button#dgsBtn"
+            },
+            "name": "dgsBtn",
+            "designerId": "82ef0c28-1d0e-4103-814e-cd4324c64ed3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "navigationview#main"
+            },
+            "name": "main",
+            "designerId": "12d55b1e-6ba5-4cf7-8dd9-b483cf7342d1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "dgsBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onDgsBtnTap",
+                "implHandler": [
+                    "this.getMain().push({",
+                    "    xtype: 'rdgdgslist',",
+                    "    title: 'РДГ-та'",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "name": "onDgsBtnTap",
+            "designerId": "c0ef4371-a591-4613-ad3e-7ec97d349b67"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdgdgslist",
+                "designer|targetType": "PodeleniaList",
+                "fn": "onRdgDgsPodListTap",
+                "implHandler": [
+                    "var store = Ext.getStore('DgsListStore'),",
+                    "    glavpod = record.get('pod_id'),",
+                    "    main = this.getMain();",
+                    "",
+                    "Ext.Viewport.setMasked({xtype:'loadmask', message:'Зареждам ...', indicator:true });",
+                    "",
+                    "store.load({",
+                    "    params: {",
+                    "        glavpod:glavpod",
+                    "    },",
+                    "    autoLoad: true,",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success && records)",
+                    "        {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "            main.push({",
+                    "                xtype:'dgstalist',",
+                    "                title: 'ДГС / ЛЗС и др.',",
+                    "                data:  record.data",
+                    "            });",
+                    "",
+                    "        } else {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "            Ext.Msg.alert('Събщение', 'Проверете връзката с интернет и рестартирайте приложението', Ext.emptyFn);",
+                    "        }",
+                    "    }",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onRdgDgsPodListTap",
+            "designerId": "c6d9f6be-7f9c-4f96-bc2f-44e72ba69921"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgdgslist",
+                "selector": "list#rdgdgslist"
+            },
+            "name": "rdgdgslist",
+            "designerId": "688f9446-dfc9-4f40-b246-682185268f3a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "dgstalist",
+                "selector": "list#dgstalist"
+            },
+            "name": "dgstalist",
+            "designerId": "4fe93d5d-bfda-4eee-b39b-01bb2bdbf88a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "dgstalist",
+                "designer|targetType": "DgsTaList",
+                "fn": "onDgstalistItemTap",
+                "implHandler": [
+                    "var store = Ext.getStore('DgsUsersStore'),",
+                    "    podid = record.get('pod_id'),",
+                    "    main = this.getMain();",
+                    "",
+                    "Ext.Viewport.setMasked({xtype:'loadmask', message:'Зареждам ...', indicator:true });",
+                    "",
+                    "store.load({",
+                    "    params: {",
+                    "        podid:podid",
+                    "    },",
+                    "    autoLoad: true,",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success && records)",
+                    "        {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "            main.push({",
+                    "                xtype:'dgsuserslist',",
+                    "                title: record.get('podelenie'),",
+                    "                data:  record.data",
+                    "            });",
+                    "",
+                    "        } else {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "            Ext.Msg.alert('Събщение', 'Проверете връзката с интернет и рестартирайте приложението', Ext.emptyFn);",
+                    "        }",
+                    "    }",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onDgstalistItemTap",
+            "designerId": "9fa5be8d-dfb2-498c-bd83-28ce0ad36e91"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "dgsuserslist",
+                "selector": "list#dgsuserslist"
+            },
+            "name": "dgsuserslist",
+            "designerId": "687598b0-7480-4a8c-a06f-25c9809ef367"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "dgsuserslist",
+                "designer|targetType": "DgsUsersList",
+                "fn": "onDgsuserslistItemTap",
+                "implHandler": [
+                    "this.getMain().push({",
+                    "    xtype: 'personaldetail',",
+                    "    title: record.get('titla') + ' ' + record.get('ime') + ' ' + record.get('fam'),",
+                    "    data: record.data,",
+                    "",
+                    "    layout: 'vbox',",
+                    "    items: [",
+                    "        {",
+                    "            xtype: 'panel',",
+                    "            docked: 'top',",
+                    "            flex: 1,",
+                    "            margin: 10,",
+                    "            tpl: [",
+                    "                '<table style=\"text-align:center\">',",
+                    "                '    <tr>',",
+                    "                '        <td style=\"padding:5px\"><img src=\"https://vasil.iag.bg/upload/{glav_pod}/{picture}\" width=\"140\" heigh=\"140\">',",
+                    "                '    </td>      ',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Поделение: </small><b>{pod}</td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Моб. тел: </small><b>{tel}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Email: </small><b>{email}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Длъжност: </small><b>{dlagnost}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Дирекция: </small><b>{directorate_badj}</b></td>',",
+                    "                '    </tr>  ',",
+                    "                '   ',",
+                    "                '</table>'",
+                    "            ]",
+                    "        },",
+                    "        {",
+                    "            xtype: 'panel',",
+                    "            flex: 1,",
+                    "            docked: 'bottom',",
+                    "            padding: 50,",
+                    "            layout: 'hbox',",
+                    "            items: [",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'Тел',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.tel === 'Не е посочен телефон') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'tel:'+record.data.tel;",
+                    "                    }",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'spacer',",
+                    "                    width: 10",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'Email',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.email === 'Не е посочен email') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'mailto:' + record.data.email;",
+                    "                    }",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'spacer',",
+                    "                    width: 10",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'SMS',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.tel === 'Не е посочен телефон') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'sms:' + record.data.tel;",
+                    "                    }",
+                    "                }",
+                    "            ]",
+                    "        },",
+                    "",
+                    "    ]",
+                    "",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onDgsuserslistItemTap",
+            "designerId": "e10a4f6f-7954-4b47-8bed-de10c7485ff5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgdgslist",
+                "selector": "list#rdgdgslist"
+            },
+            "name": "rdgdgslist",
+            "designerId": "dad0a0de-609a-479c-8073-4b222345a35b"
+        }
+    ]
+}

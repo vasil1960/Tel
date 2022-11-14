@@ -1,0 +1,35 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "fade",
+        "defaultBackButtonText": "<-",
+        "designer|initialView": true,
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main",
+        "id": "main",
+        "itemId": ""
+    },
+    "name": "MyNavigationView",
+    "designerId": "b4001bdd-9242-421a-904c-7327ca93d921",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Изпълнителна агенция по горите"
+            },
+            "name": "mainmenupanel1",
+            "designerId": "e78c89a8-eb0c-4bb1-8b83-4a30678d50c3",
+            "masterInstanceId": "a42eac23-73e4-4a7c-816b-3222b6d8695a"
+        }
+    ]
+}

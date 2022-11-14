@@ -1,0 +1,80 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdguserslist",
+        "designer|userClassName": "RdgUsersList",
+        "emptyText": "Няма такъв служител",
+        "id": null,
+        "itemId": "rdguserslist",
+        "loadingText": "Зареждам ...",
+        "onItemDisclosure": null,
+        "store": "RdgUsersStore"
+    },
+    "name": "IagUsersList1",
+    "designerId": "3a05f651-38d5-41eb-b021-d24067c2bb7e",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<table>",
+                    "    <tr>",
+                    "        <td style=\"padding:20px\"><img src=\"https://vasil.iag.bg/upload/{glav_pod}/{picture}\" width=\"80\" heigh=\"80\"></img></td>",
+                    "        <td>",
+                    "            <table>",
+                    "                <tr>",
+                    "                    <td><b>{titla} {ime} {fam}</b></td>",
+                    "                </tr> ",
+                    "                <tr>",
+                    "                    <td><small>{pod}</small></td>",
+                    "                </tr>",
+                    "                <tr>",
+                    "                    <td><small>{tel}</small></td>",
+                    "                </tr>",
+                    "                <tr>",
+                    "                    <td><small>{email}</small></td>",
+                    "                </tr>",
+                    "                <tr>",
+                    "                    <td><small>{dlagnost}</small></td>",
+                    "                </tr>",
+                    "            </table>",
+                    "            ",
+                    "            ",
+                    "        </td>",
+                    "         ",
+                    "    </tr>",
+                    "</table>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "71dcf2a6-8440-4cf7-841b-0051d7c102ef"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true,
+                "loadMoreText": "Зареждам още ...",
+                "noMoreRecordsText": "Няма повече записи",
+                "pluginId": "myplugin"
+            },
+            "name": "MyListPagingPlugin1",
+            "designerId": "fe8be52c-1361-493d-811e-9aeb03efab4d"
+        }
+    ]
+}

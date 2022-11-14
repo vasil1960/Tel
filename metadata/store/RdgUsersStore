@@ -1,0 +1,49 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "rdgusersstore",
+        "designer|userClassName": "RdgUsersStore",
+        "model": "IagUsersModel",
+        "remoteFilter": true,
+        "storeId": "RdgUsersStore",
+        "syncRemovedRecords": false
+    },
+    "name": "IagStore2",
+    "designerId": "566c286c-a11f-4a08-8e8e-9869a1851b5a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "https://vasil.iag.bg/tel/allusers/users_by_podelenia"
+            },
+            "name": "MyJsonPProxy1",
+            "designerId": "2a381029-0f31-4cd5-aa77-3dbd1b7323c8",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "records"
+                    },
+                    "name": "MyJsonReader1",
+                    "designerId": "83d7a443-bd06-4a3d-b64f-14fe1fc0ba4f"
+                }
+            ]
+        }
+    ]
+}

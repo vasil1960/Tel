@@ -1,0 +1,80 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "aboutcontroller",
+        "designer|userClassName": "AboutController"
+    },
+    "name": "MyController",
+    "designerId": "41104451-fd07-44ec-9223-788f298db09b",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "navigationview#main"
+            },
+            "name": "main",
+            "designerId": "71f997cb-9353-4ea4-9f85-01e1a270a91a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "about",
+                "selector": "panel#about"
+            },
+            "name": "about",
+            "designerId": "045fdf0a-8498-4616-a6b4-16ad82d339d7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "aboutBtn",
+                "selector": "button#aboutBtn"
+            },
+            "name": "aboutBtn",
+            "designerId": "def854fe-d61c-49db-8dfd-1916ef108f76"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "aboutBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onAboutBtnTap",
+                "implHandler": [
+                    "this.getMain().push({",
+                    "    xtype: 'about',",
+                    "    title: 'За приложението'",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "name": "onAboutBtnTap",
+            "designerId": "c62584c8-79f5-4d23-b0b3-d9577c02fcb6"
+        }
+    ]
+}

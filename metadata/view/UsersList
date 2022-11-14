@@ -1,0 +1,100 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "userslist",
+        "designer|userClassName": "UsersList",
+        "emptyText": "Няма такъв служител",
+        "id": null,
+        "itemId": "userslist",
+        "loadingText": "Зареждам ...",
+        "onItemDisclosure": null,
+        "store": "Store"
+    },
+    "name": "MyList1",
+    "designerId": "9c3bbd5c-dfe2-46c8-bdab-91a1abf5bab2",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<table>",
+                    "    <tr>",
+                    "        <td style=\"padding:20px\"><img src=\"https://vasil.iag.bg/upload/{glav_pod}/{picture}\" width=\"80\" heigh=\"80\"></img></td>",
+                    "        <td>",
+                    "            <table>",
+                    "                <tr>",
+                    "                    <td><b>{titla} {ime} {fam}</b></td>",
+                    "                </tr> ",
+                    "                <tr>",
+                    "                    <td><small>{pod}</small></td>",
+                    "                </tr>",
+                    "                <tr>",
+                    "                    <td><small>{tel}</small></td>",
+                    "                </tr>",
+                    "                <tr>",
+                    "                    <td><small>{email}</small></td>",
+                    "                </tr>",
+                    "                <tr>",
+                    "                    <td><small>{dlagnost}</small></td>",
+                    "                </tr>",
+                    "            </table>",
+                    "            ",
+                    "            ",
+                    "        </td>",
+                    "         ",
+                    "    </tr>",
+                    "</table>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "b2bb58a9-f732-43f1-b5b9-3454806ba277"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true,
+                "loadMoreText": "Зареждам още ...",
+                "noMoreRecordsText": "Няма повече записи",
+                "pluginId": "myplugin"
+            },
+            "name": "MyListPagingPlugin1",
+            "designerId": "d0e61c4d-93d4-4d9f-97bc-d2a272f0fa72"
+        },
+        {
+            "type": "Ext.field.Search",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "disabled": false,
+                "docked": "top",
+                "id": "",
+                "itemId": "searchusr",
+                "label": null,
+                "margin": 10,
+                "padding": null
+            },
+            "name": "MySearchField",
+            "designerId": "3e9be0d9-43d9-4f68-84f8-e5924c11340e"
+        }
+    ]
+}

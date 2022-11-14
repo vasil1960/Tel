@@ -7,17 +7,39 @@
     "codeClass": null,
     "userConfig": {
         "controllers": [
-            "AllUsersSearch"
+            "Main",
+            "Func",
+            "IagController",
+            "AboutController",
+            "RdgController",
+            "PodController"
         ],
         "models": [
-            "Model"
+            "IagUsersModel",
+            "Podelenia"
         ],
         "name": "Tel",
         "stores": [
-            "Store"
+            "Store",
+            "IagStore",
+            "RdgStore",
+            "RdgUsersStore",
+            "DgsListStore",
+            "DgsUsersStore",
+            "RdgDgsStore"
         ],
         "views": [
-            "Container"
+            "PersonalDetail",
+            "UsersList",
+            "PodeleniaList",
+            "MainMenuPanel",
+            "Main",
+            "IagUsersList",
+            "RdgList",
+            "RdgUsersList",
+            "RdgDgsList",
+            "DgsTaList",
+            "DgsUsersList"
         ]
     },
     "name": "Application",

@@ -1,0 +1,206 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "iagcontroller",
+        "designer|userClassName": "IagController"
+    },
+    "name": "MyController",
+    "designerId": "af2dfe8e-fab8-4909-95e0-f1b42c660561",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "iagBtn",
+                "selector": "button#iagBtn",
+                "xtype": "Ext.Button"
+            },
+            "name": "iagBtn",
+            "designerId": "9bd55635-ce70-446e-b1c7-3bdf8bc0594e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "iagBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onIagBtnTap",
+                "implHandler": [
+                    "this.getApplication().getController('Func').loadStore('IagStore');",
+                    "",
+                    "this.getMain().push({",
+                    "    xtype: 'iaguserslist',",
+                    "    title: 'Служители в ИАГ'",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "name": "onIagBtnTap",
+            "designerId": "f10a5298-f504-463b-b0c7-95df99b8d708"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "iaguserslist",
+                "selector": "list#iaguserslist"
+            },
+            "name": "iaguserslist",
+            "designerId": "f9695964-8238-40c2-9a2b-a0f3af351374"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "navigationview#main"
+            },
+            "name": "main",
+            "designerId": "ff0eb1a6-3c3a-41cd-a517-aed3d24927d5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "iaguserslist",
+                "designer|targetType": "IagUsersList",
+                "fn": "onIaguserslistItemTap",
+                "implHandler": [
+                    "this.getMain().push({",
+                    "            xtype: 'personaldetail',",
+                    "            title: record.get('titla') + ' ' + record.get('ime') + ' ' + record.get('fam'),",
+                    "            data: record.data,",
+                    "",
+                    "            layout: 'vbox',",
+                    "            items: [",
+                    "                {",
+                    "                    xtype: 'panel',",
+                    "                    docked: 'top',",
+                    "                    flex: 1,",
+                    "                    margin: 10,",
+                    "                    tpl: [",
+                    "                        '<table style=\"text-align:center\">',",
+                    "                        '    <tr>',",
+                    "                        '        <td style=\"padding:5px\"><img src=\"https://vasil.iag.bg/upload/{glav_pod}/{picture}\" width=\"140\" heigh=\"140\">',",
+                    "                        '    </td>      ',",
+                    "                        '    <tr>',",
+                    "                        '        <td><small>Поделение: </small><b>{pod}</td>',",
+                    "                        '    </tr>',",
+                    "                        '    <tr>',",
+                    "                        '        <td><small>Моб. тел: </small><b>{tel}</b></td>',",
+                    "                        '    </tr>',",
+                    "                        '    <tr>',",
+                    "                        '        <td><small>Email: </small><b>{email}</b></td>',",
+                    "                        '    </tr>',",
+                    "                        '    <tr>',",
+                    "                        '        <td><small>Длъжност: </small><b>{dlagnost}</b></td>',",
+                    "                        '    </tr>',",
+                    "                        '    <tr>',",
+                    "                        '        <td><small>Дирекция: </small><b>{directorate_badj}</b></td>',",
+                    "                        '    </tr>  ',",
+                    "                        '   ',",
+                    "                        '</table>'",
+                    "                    ]",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'panel',",
+                    "                    flex: 1,",
+                    "                    docked: 'bottom',",
+                    "                    padding: 50,",
+                    "                    layout: 'hbox',",
+                    "                    items: [",
+                    "                        {",
+                    "                            xtype: 'button',",
+                    "                            flex: 1,",
+                    "                            text: 'Тел',",
+                    "                            padding: 10,",
+                    "                            ui: 'action-small',",
+                    "                            disabled : (record.data.tel === 'Не е посочен телефон') ? true : false,",
+                    "                            handler: function() {",
+                    "                                document.location.href = 'tel:'+record.data.tel;",
+                    "                                    }",
+                    "                        },",
+                    "                        {",
+                    "                            xtype: 'spacer',",
+                    "                            width: 10",
+                    "                        },",
+                    "                        {",
+                    "                            xtype: 'button',",
+                    "                            flex: 1,",
+                    "                            text: 'Email',",
+                    "                            padding: 10,",
+                    "                            ui: 'action-small',",
+                    "                            disabled : (record.data.email === 'Не е посочен email') ? true : false,",
+                    "                            handler: function() {",
+                    "                                document.location.href = 'mailto:' + record.data.email;",
+                    "                            }",
+                    "                        },",
+                    "                        {",
+                    "                            xtype: 'spacer',",
+                    "                            width: 10",
+                    "                        },",
+                    "                        {",
+                    "                            xtype: 'button',",
+                    "                            flex: 1,",
+                    "                            text: 'SMS',",
+                    "                            padding: 10,",
+                    "                            ui: 'action-small',",
+                    "                            disabled : (record.data.tel === 'Не е посочен телефон') ? true : false,",
+                    "                            handler: function() {",
+                    "                                document.location.href = 'sms:' + record.data.tel;",
+                    "                            }",
+                    "                        }",
+                    "                    ]",
+                    "                },",
+                    "",
+                    "            ]",
+                    "",
+                    "        });",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onIaguserslistItemTap",
+            "designerId": "ef14269b-1040-4f25-8140-05b36874819d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "personaldetail",
+                "selector": "container#personaldetail"
+            },
+            "name": "personaldetail",
+            "designerId": "1ba09d06-0d0a-423c-903d-af64a6873575"
+        }
+    ]
+}

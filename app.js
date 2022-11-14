@@ -21,22 +21,44 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'Model'
+        'IagUsersModel',
+        'Podelenia'
     ],
     stores: [
-        'Store'
+        'Store',
+        'IagStore',
+        'RdgStore',
+        'RdgUsersStore',
+        'DgsListStore',
+        'DgsUsersStore',
+        'RdgDgsStore'
     ],
     views: [
-        'Container'
+        'PersonalDetail',
+        'UsersList',
+        'PodeleniaList',
+        'MainMenuPanel',
+        'Main',
+        'IagUsersList',
+        'RdgList',
+        'RdgUsersList',
+        'RdgDgsList',
+        'DgsTaList',
+        'DgsUsersList'
     ],
     controllers: [
-        'AllUsersSearch'
+        'Main',
+        'Func',
+        'IagController',
+        'AboutController',
+        'RdgController',
+        'PodController'
     ],
     name: 'Tel',
 
     launch: function() {
 
-        Ext.create('Tel.view.Container', {fullscreen: true});
+        Ext.create('Tel.view.Main', {fullscreen: true});
     }
 
 });

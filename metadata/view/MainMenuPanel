@@ -1,0 +1,317 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "mainmenupanel",
+        "designer|userClassName": "MainMenuPanel",
+        "layout": "vbox"
+    },
+    "name": "MyPanel",
+    "designerId": "a42eac23-73e4-4a7c-816b-3222b6d8695a",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "layout": "fit",
+                "layout|flex": 2
+            },
+            "name": "MyPanel",
+            "designerId": "fa01206d-f767-4522-98ae-1d4cdf58d638",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "src": "resources/images/main.png"
+                    },
+                    "name": "MyImg1",
+                    "designerId": "cb7b7ca8-ba5c-439e-aad7-26a40625e5ac"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "layout": "vbox",
+                "layout|flex": 2,
+                "margin": 30
+            },
+            "name": "MyPanel1",
+            "designerId": "cb79584b-399f-48da-8045-086aea9126f4",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "layout|flex": 1,
+                        "margin": null,
+                        "padding": ""
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "8717c48b-77bd-4cae-b7be-b83d82130db6",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "border": null,
+                                "designer|uiInterfaceName": "action-small",
+                                "docked": null,
+                                "height": null,
+                                "icon": null,
+                                "iconAlign": "center",
+                                "iconCls": null,
+                                "id": "iagBtn",
+                                "layout|flex": 1,
+                                "margin": null,
+                                "padding": null,
+                                "text": "ИАГ",
+                                "ui": "action-small",
+                                "width": null
+                            },
+                            "name": "MyButton",
+                            "designerId": "3abbf36f-0fa3-4c20-82bf-cb565b7b39eb"
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 10
+                            },
+                            "name": "MySpacer",
+                            "designerId": "18603424-9beb-4188-9c1c-7454755c955c"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": null,
+                                "designer|uiInterfaceName": "action-small",
+                                "disabled": false,
+                                "docked": null,
+                                "height": null,
+                                "id": "rdgBtn",
+                                "layout|flex": 1,
+                                "margin": null,
+                                "padding": null,
+                                "text": "РДГ / ДП / ИАГ под.",
+                                "ui": "action-small",
+                                "width": null
+                            },
+                            "name": "MyButton1",
+                            "designerId": "acb34afc-108a-4de8-a2cd-87da677b16af"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "layout|flex": 1,
+                        "margin": "10 0",
+                        "padding": null
+                    },
+                    "name": "MyPanel3",
+                    "designerId": "7fde2042-8ab4-4263-9c83-ed42e84ed48e",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|uiInterfaceName": "action-small",
+                                "docked": null,
+                                "height": null,
+                                "id": "dgsBtn",
+                                "layout|flex": 1,
+                                "margin": null,
+                                "maxHeight": null,
+                                "padding": null,
+                                "text": "ДГС / ДЛС",
+                                "ui": "action-small",
+                                "width": null
+                            },
+                            "name": "MyButton2",
+                            "designerId": "ad4a4ec9-072b-4455-9c43-2f28627d6a9e"
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 10
+                            },
+                            "name": "MySpacer1",
+                            "designerId": "f4a2cfe7-b061-46d9-a3cf-a778c3ab555d"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|uiInterfaceName": "action-small",
+                                "docked": null,
+                                "height": null,
+                                "iconAlign": "center",
+                                "iconCls": "search",
+                                "id": "searchBtn",
+                                "layout|flex": 1,
+                                "margin": null,
+                                "padding": null,
+                                "text": null,
+                                "ui": "action-small",
+                                "width": null
+                            },
+                            "name": "MyButton3",
+                            "designerId": "0b38503f-3273-440a-87d1-f04dc3459f93"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "layout|flex": 1,
+                        "margin": null
+                    },
+                    "name": "MyPanel4",
+                    "designerId": "31162834-0331-4734-b38d-3df40b931a81",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|uiInterfaceName": "action-small",
+                                "disabled": true,
+                                "docked": null,
+                                "height": null,
+                                "id": "podBtn",
+                                "layout|flex": 1,
+                                "margin": null,
+                                "padding": null,
+                                "text": null,
+                                "ui": "action-small",
+                                "width": null
+                            },
+                            "name": "MyButton4",
+                            "designerId": "b0bfd121-0b3f-4fa6-bb5e-85de08062782"
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 10
+                            },
+                            "name": "MySpacer2",
+                            "designerId": "c2fa9255-218e-47fa-a44d-9fcfe9ca2bd8"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|uiInterfaceName": "action-small",
+                                "docked": null,
+                                "height": null,
+                                "id": "aboutBtn",
+                                "layout|flex": 1,
+                                "margin": null,
+                                "padding": null,
+                                "text": "За приложението",
+                                "ui": "action-small",
+                                "width": null
+                            },
+                            "name": "MyButton5",
+                            "designerId": "6611783e-0be0-40b5-b594-e0fee24c982f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": null,
+                "layout|flex": 1,
+                "margin": null,
+                "modal": false,
+                "right": null
+            },
+            "name": "MyPanel5",
+            "designerId": "9fe0216f-f078-469e-bc23-8fe83beab5dc"
+        }
+    ]
+}

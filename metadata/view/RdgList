@@ -1,0 +1,51 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdglist",
+        "designer|userClassName": "RdgList",
+        "itemId": "rdglist",
+        "loadingText": "Зареждам ...",
+        "onItemDisclosure": true,
+        "store": "RdgStore"
+    },
+    "name": "MyList",
+    "designerId": "849bbede-d18c-4dc0-b8f3-856ca38ad557",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{podelenie}</div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "93c3f024-b735-4030-815b-a1139cc83422"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true,
+                "loadMoreText": "Зареждам още ...",
+                "noMoreRecordsText": "Няма повече записи."
+            },
+            "name": "MyListPagingPlugin2",
+            "designerId": "e6da7fbd-4a8e-469c-9fc2-8fec7e31ca03"
+        }
+    ]
+}

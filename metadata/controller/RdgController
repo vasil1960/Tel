@@ -1,0 +1,248 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdgcontroller",
+        "designer|userClassName": "RdgController"
+    },
+    "name": "MyController",
+    "designerId": "a887e81c-7bc2-4f43-b007-d9b6dc93a9d4",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "#main"
+            },
+            "name": "main",
+            "designerId": "e385ce3f-8031-474f-88f6-b7caa48b4f74"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgBtn",
+                "selector": "button#rdgBtn"
+            },
+            "name": "rdgBtn",
+            "designerId": "9c783cb6-b567-4b5b-b91c-5b723d71b26b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdgBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onRdgBtnTap",
+                "implHandler": [
+                    "this.getMain().push({",
+                    "    xtype: 'rdglist',",
+                    "    title: 'РДГ/ ДП / ИАГ поделения'",
+                    "});",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onRdgBtnTap",
+            "designerId": "a3a44590-239b-4bc3-800e-f2517b310fcd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdglist",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onRdgListItemTap",
+                "implHandler": [
+                    "var store = Ext.getStore('RdgUsersStore'),",
+                    "    podid = record.get('pod_id'),",
+                    "    main = this.getMain();",
+                    "",
+                    "Ext.Viewport.setMasked({xtype:'loadmask', message:'Зареждам ...', indicator:true });",
+                    "",
+                    "store.load({",
+                    "    params: {",
+                    "        podid:podid",
+                    "    },",
+                    "    autoLoad: true,",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success && records)",
+                    "        {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "            main.push({",
+                    "                xtype:'rdguserslist',",
+                    "                title: record.get('podelenie'),",
+                    "                data: record.data",
+                    "            });",
+                    "",
+                    "        } else {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "            Ext.Msg.alert('Събщение', 'Проверете връзката с интернет и рестартирайте приложението', Ext.emptyFn);",
+                    "        }",
+                    "    }",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onRdgListItemTap",
+            "designerId": "faf3031a-1317-47ff-9bde-90b9fcdec2f3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdglist",
+                "selector": "list#rdglist"
+            },
+            "name": "rdglist",
+            "designerId": "938ef233-4ebe-4cd7-bdc2-53a0c164c7f4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdguserslist",
+                "designer|targetType": "RdgUsersList",
+                "fn": "onRdgUserslistItemTap",
+                "implHandler": [
+                    "this.getMain().push({",
+                    "    xtype: 'personaldetail',",
+                    "    title: record.get('titla') + ' ' + record.get('ime') + ' ' + record.get('fam'),",
+                    "    data: record.data,",
+                    "",
+                    "    layout: 'vbox',",
+                    "    items: [",
+                    "        {",
+                    "            xtype: 'panel',",
+                    "            docked: 'top',",
+                    "            flex: 1,",
+                    "            margin: 10,",
+                    "            tpl: [",
+                    "                '<table style=\"text-align:center\">',",
+                    "                '    <tr>',",
+                    "                '        <td style=\"padding:5px\"><img src=\"https://vasil.iag.bg/upload/{glav_pod}/{picture}\" width=\"140\" heigh=\"140\">',",
+                    "                '    </td>      ',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Поделение: </small><b>{pod}</td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Моб. тел: </small><b>{tel}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Email: </small><b>{email}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Длъжност: </small><b>{dlagnost}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Дирекция: </small><b>{directorate_badj}</b></td>',",
+                    "                '    </tr>  ',",
+                    "                '   ',",
+                    "                '</table>'",
+                    "            ]",
+                    "        },",
+                    "        {",
+                    "            xtype: 'panel',",
+                    "            flex: 1,",
+                    "            docked: 'bottom',",
+                    "            padding: 50,",
+                    "            layout: 'hbox',",
+                    "            items: [",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'Тел',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.tel === 'Не е посочен телефон') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'tel:'+record.data.tel;",
+                    "                    }",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'spacer',",
+                    "                    width: 10",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'Email',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.email === 'Не е посочен email') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'mailto:' + record.data.email;",
+                    "                    }",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'spacer',",
+                    "                    width: 10",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'SMS',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.tel === 'Не е посочен телефон') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'sms:' + record.data.tel;",
+                    "                    }",
+                    "                }",
+                    "            ]",
+                    "        },",
+                    "",
+                    "    ]",
+                    "",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onRdgUserslistItemTap",
+            "designerId": "5aa24cf6-fc9a-4ebb-8dec-9445055ab093"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdguserslist",
+                "selector": "list#rdguserslist"
+            },
+            "name": "rdguserslist",
+            "designerId": "f02e93e5-f15c-4810-95df-14a6182b5129"
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "baseCls": null,
+        "designer|userAlias": "personaldetail",
+        "designer|userClassName": "PersonalDetail",
+        "hidden": null,
+        "html": null,
+        "itemId": "personaldetail",
+        "layout": "fit",
+        "margin": null,
+        "padding": null,
+        "scrollable": null,
+        "styleHtmlContent": true
+    },
+    "name": "MyContainer",
+    "designerId": "23489c9b-ed21-45ca-8d01-b7c9fef82be9",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "<table style=\"text-align:center\">",
+                    "    <tr>",
+                    "        <td style=\"padding:5px\"><img src=\"https://vasil.iag.bg/upload/{glav_pod}/{picture}\" width=\"140\" heigh=\"140\">",
+                    "    </td>      ",
+                    "    <tr>",
+                    "        <td><small>Поделение: </small><b>{pod}</td>",
+                    "    </tr>",
+                    "    <tr>",
+                    "        <td><small>Моб. тел: </small><b>{tel}</b></td>",
+                    "    </tr>",
+                    "    <tr>",
+                    "        <td><small>Email: </small><b>{email}</b></td>",
+                    "    </tr>",
+                    "    <tr>",
+                    "        <td><small>Длъжност: </small><b>{dlagnost}</b></td>",
+                    "    </tr>",
+                    "    <tr>",
+                    "        <td><small>Дирекция: </small><b>{directorate_badj}</b></td>",
+                    "    </tr>  ",
+                    "   ",
+                    "</table>"
+                ]
+            },
+            "name": "tpl",
+            "designerId": "b1807eac-11ca-406e-97c9-d1b143244264"
+        }
+    ]
+}

@@ -1,0 +1,213 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "iagusersmodel",
+        "designer|userClassName": "IagUsersModel"
+    },
+    "name": "MyModel",
+    "designerId": "3eb70cd8-90fa-44ad-bcd8-50c57d9afaeb",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "sortType": "asInt",
+                "type": "int"
+            },
+            "name": "field",
+            "designerId": "a7953567-b28b-40b2-8938-53990263af06"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ime"
+            },
+            "name": "field1",
+            "designerId": "de8f4668-7ef1-4ead-b3d9-ebc1810e91a2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "titla"
+            },
+            "name": "field2",
+            "designerId": "843b2144-ac2e-4581-a6f9-6467391733ed"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "prez"
+            },
+            "name": "field3",
+            "designerId": "469a269d-a513-47a1-be1e-c7b7039a116d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fam"
+            },
+            "name": "field4",
+            "designerId": "fc10a2b0-742d-4410-b9b8-890ddca3347c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pod"
+            },
+            "name": "field5",
+            "designerId": "51c0f02d-aa65-4854-b761-aeb61b27d51d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tel"
+            },
+            "name": "field6",
+            "designerId": "060ecb41-7305-4422-a33a-5f1f3d6df6d3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "glav_pod"
+            },
+            "name": "field7",
+            "designerId": "b8826bbc-7e4a-4831-828c-7269787f3416"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "email"
+            },
+            "name": "field8",
+            "designerId": "a597dd28-c8b6-4c4f-96fc-51a188ab8f01"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "picture"
+            },
+            "name": "field9",
+            "designerId": "90bd12c0-2b50-49a9-85fb-5b98178ac78a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "egn"
+            },
+            "name": "field10",
+            "designerId": "3a15b2ab-be0f-42f0-8923-d7b269a83414"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dlagnost"
+            },
+            "name": "field11",
+            "designerId": "31bba1e3-1f36-4248-bff1-9431e0de51a8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "directorate"
+            },
+            "name": "field12",
+            "designerId": "1a4547d3-cdc7-4b83-bb48-14c8603d578a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "directorate_badj"
+            },
+            "name": "field13",
+            "designerId": "b62562ec-1ad5-4ae6-8f51-492b31a23de9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pod_id"
+            },
+            "name": "field14",
+            "designerId": "4143cf1d-4cab-423a-94b1-3265ffe98cad"
+        }
+    ]
+}

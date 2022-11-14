@@ -1,0 +1,488 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main"
+    },
+    "name": "MyController",
+    "designerId": "76f252e8-f192-405a-b881-d6671958e082",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchusr",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchfieldKeyup",
+                "implHandler": [
+                    "var value = textfield.getValue();",
+                    "if (Number(value) === parseInt(value, 10))",
+                    "  this.search('Store', textfield, 'searchByTelNumber');",
+                    "else",
+                    "  this.search('Store', textfield, 'searchByImeOrAndFam');"
+                ],
+                "name": "keyup"
+            },
+            "name": "onSearchfieldKeyup",
+            "designerId": "f8873612-c4df-40d2-b829-124fccd85cdb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchpod",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onClearIconSearchPodTap",
+                "implHandler": [
+                    "this.getApplication().getController('Func').clearList('Podelenia', 'https://vasil.iag.bg/tel/podelenia/all');",
+                    ""
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onClearIconSearchPodTap",
+            "designerId": "ac8ece51-e7a1-4476-8931-c690892809f0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchusr",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onClearIconSearchUsrTap1",
+                "implHandler": [
+                    "this.getApplication().getController('Func').clearList('Store', 'https://vasil.iag.bg/tel/allusers/all');"
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onClearIconSearchUsrTap1",
+            "designerId": "69bd0c24-85de-4203-85ba-fe7aa09bfcf7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchpod",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchfieldPodKeyup",
+                "implHandler": [
+                    "this.search('Podelenia', textfield, 'searchByPodelenie');"
+                ],
+                "name": "keyup"
+            },
+            "name": "onSearchfieldPodKeyup",
+            "designerId": "f3bbf75a-8f7b-46e9-86a4-b46aa844f545"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store",
+                    "textfield",
+                    "key"
+                ],
+                "fn": "search",
+                "implHandler": [
+                    "Ext.Viewport.setMasked({xtype:'loadmask', message:'Зареждам ...', indicator:true });",
+                    "",
+                    "var store = Ext.getStore(store),",
+                    "    value = textfield.getValue();",
+                    "",
+                    "store.clearFilter();",
+                    "",
+                    "store.currentPage = 1;",
+                    "",
+                    "if (key == 'searchByImeOrAndFam' && value.length === 0 ) {",
+                    "",
+                    "    this.getApplication().getController('Func').clearList(store,'https://vasil.iag.bg/tel/allusers/all');",
+                    "}",
+                    "",
+                    "if (key == 'searchByPodelenie' && value.length === 0 ) {",
+                    "",
+                    "    this.getApplication().getController('Func').clearList(store,'https://vasil.iag.bg/tel/podelenia/all');",
+                    "}",
+                    "",
+                    "",
+                    "if (value.length < 1) {",
+                    "    return;",
+                    "}",
+                    "",
+                    "",
+                    "if(value && key == 'searchByImeOrAndFam'){",
+                    "",
+                    "    var val = value.split(' ');",
+                    "",
+                    "    if(val.length == 1){",
+                    "        store.getProxy().setUrl('https://vasil.iag.bg/tel/allusers/imeOrFam');",
+                    "        store.getProxy().setExtraParams({strImeOrFam:val[0]});",
+                    "    }",
+                    "",
+                    "    if(val.length == 2){",
+                    "        store.getProxy().setUrl('https://vasil.iag.bg/tel/allusers/imeAndFam');",
+                    "        store.getProxy().setExtraParams({strIme:val[0], strFam:val[1]});",
+                    "    }",
+                    "}",
+                    "",
+                    "",
+                    "if(value && key == 'searchByTelNumber'){",
+                    "    if(value.length > 2){",
+                    "        store.getProxy().setUrl('https://vasil.iag.bg/tel/allusers/byNumber');",
+                    "        store.getProxy().setExtraParams({number:value});",
+                    "    }",
+                    "}",
+                    "",
+                    "",
+                    "if(value && key == 'searchByPodelenie'){",
+                    "",
+                    "    if(value.length > 0){",
+                    "        store.getProxy().setUrl('https://vasil.iag.bg/tel/podelenia');",
+                    "        store.getProxy().setExtraParams({pod:value});",
+                    "    }",
+                    "}",
+                    "",
+                    "this.getApplication().getController('Func').loadStore(store);",
+                    "",
+                    "Ext.Viewport.setMasked(false);"
+                ]
+            },
+            "name": "search",
+            "designerId": "037e8603-c8bd-4522-8e6c-bb59a8546c2d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "alluserslist",
+                "selector": "allusers list"
+            },
+            "name": "alluserslist",
+            "designerId": "f27e02d8-81d0-41d8-9a36-166e4432bdd7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "podlist",
+                "selector": "podelenialistt#podlist"
+            },
+            "name": "podlist",
+            "designerId": "da853520-1223-4a99-bd95-d1dc470bbc40"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "podelenia",
+                "selector": "podelenia"
+            },
+            "name": "podelenia",
+            "designerId": "c360af9c-fc60-4aa1-ab1c-25b30b970d54"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "iagBtn",
+                "selector": "button#iagBtn"
+            },
+            "name": "iagBtn",
+            "designerId": "e022cd92-cb71-4ae2-acdf-fa8554377d51"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "navigationview#main"
+            },
+            "name": "main",
+            "designerId": "e9c40c1b-4e2b-446f-9f19-c7e2adac454f"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userslist",
+                "selector": "list#userslist"
+            },
+            "name": "userslist",
+            "designerId": "ce34a682-9db8-4c80-bf99-43aeca3cb187"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "aboutBtn",
+                "selector": "button#aboutBtn"
+            },
+            "name": "aboutBtn",
+            "designerId": "ae6acf90-114d-44f9-85fc-22c31463ca48"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchBtn",
+                "selector": "button#searchBtn"
+            },
+            "name": "searchBtn",
+            "designerId": "2d20c2f8-14a8-45a5-bb97-a56139364785"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSearchBtnTap",
+                "implHandler": [
+                    "",
+                    "        this.getMain().push(",
+                    "            Ext.create('Tel.view.UsersList',{",
+                    "                title: 'Търсене в цялата БД',",
+                    "                data:  record.data",
+                    "            })",
+                    "        );"
+                ],
+                "name": "tap"
+            },
+            "name": "onSearchBtnTap",
+            "designerId": "c5259083-5646-450c-b7fa-0a40719479da"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchusr",
+                "selector": "searchfield#searchusr",
+                "xtype": "Ext.field.Search"
+            },
+            "name": "searchusr",
+            "designerId": "a73633f6-e144-4f91-b486-a0c0577b800e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "podBtn",
+                "selector": "button#podBtn"
+            },
+            "name": "podBtn",
+            "designerId": "bf6a631f-c6da-47dc-9e9c-2572dd588d33"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "podBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onPodBtnTap",
+                "implHandler": [
+                    "// this.getMain().push({",
+                    "//     xtype: 'podelenialist',",
+                    "//     title: 'Търсене поделения',",
+                    "// });"
+                ],
+                "name": "tap"
+            },
+            "name": "onPodBtnTap",
+            "designerId": "df70fdc5-fa97-4032-81a5-d445f544c085"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchpod",
+                "selector": "searchfield#searchpod",
+                "xtype": "Ext.field.Search"
+            },
+            "name": "searchpod",
+            "designerId": "d8dbfcea-7162-4f54-988c-eac83ad027ce"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "userslist",
+                "designer|targetType": "UsersList",
+                "fn": "onUsersListItemTap",
+                "implHandler": [
+                    "this.getMain().push({",
+                    "    xtype: 'personaldetail',",
+                    "    title: record.get('titla') + ' ' + record.get('ime') + ' ' + record.get('fam'),",
+                    "    data: record.data,",
+                    "",
+                    "    layout: 'vbox',",
+                    "    items: [",
+                    "        {",
+                    "            xtype: 'panel',",
+                    "            docked: 'top',",
+                    "            flex: 1,",
+                    "            margin: 10,",
+                    "            tpl: [",
+                    "                '<table style=\"text-align:center\">',",
+                    "                '    <tr>',",
+                    "                '        <td style=\"padding:5px\"><img src=\"https://vasil.iag.bg/upload/{glav_pod}/{picture}\" width=\"140\" heigh=\"140\">',",
+                    "                '    </td>      ',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Поделение: </small><b>{pod}</td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Моб. тел: </small><b>{tel}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Email: </small><b>{email}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Длъжност: </small><b>{dlagnost}</b></td>',",
+                    "                '    </tr>',",
+                    "                '    <tr>',",
+                    "                '        <td><small>Дирекция: </small><b>{directorate_badj}</b></td>',",
+                    "                '    </tr>  ',",
+                    "                '   ',",
+                    "                '</table>'",
+                    "            ]",
+                    "        },",
+                    "        {",
+                    "            xtype: 'panel',",
+                    "            flex: 1,",
+                    "            docked: 'bottom',",
+                    "            padding: 50,",
+                    "            layout: 'hbox',",
+                    "            items: [",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'Тел',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.tel === 'Не е посочен телефон') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'tel:'+record.data.tel;",
+                    "                    }",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'spacer',",
+                    "                    width: 10",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'Email',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.email === 'Не е посочен email') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'mailto:' + record.data.email;",
+                    "                    }",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'spacer',",
+                    "                    width: 10",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    flex: 1,",
+                    "                    text: 'SMS',",
+                    "                    padding: 10,",
+                    "                    ui: 'action-small',",
+                    "                    disabled : (record.data.tel === 'Не е посочен телефон') ? true : false,",
+                    "                    handler: function() {",
+                    "                        document.location.href = 'sms:' + record.data.tel;",
+                    "                    }",
+                    "                }",
+                    "            ]",
+                    "        },",
+                    "",
+                    "    ]",
+                    "",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onUsersListItemTap",
+            "designerId": "caeb3e27-2aef-45e6-8bd3-d00da04a6c00"
+        }
+    ]
+}

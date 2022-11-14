@@ -1,0 +1,52 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dgstalist",
+        "designer|userClassName": "DgsTaList",
+        "itemCls": null,
+        "itemId": "dgstalist",
+        "loadingText": "Зареждам ...",
+        "onItemDisclosure": true,
+        "store": "DgsListStore"
+    },
+    "name": "PodeleniaList1",
+    "designerId": "2bce0f6f-2854-4fde-ba71-71e49578ed45",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{podelenie}</div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "395e794f-d550-4c9a-a34b-f174ef9e15f3"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true,
+                "loadMoreText": "Зареждам още ...",
+                "noMoreRecordsText": "Няма повече записи."
+            },
+            "name": "MyListPagingPlugin",
+            "designerId": "691b037e-5d50-4eae-8dee-afb67d884652"
+        }
+    ]
+}
